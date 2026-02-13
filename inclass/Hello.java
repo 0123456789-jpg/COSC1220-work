@@ -1,5 +1,3 @@
-package inclass;
-
 import java.util.Arrays;
 
 /**
