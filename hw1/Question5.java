@@ -9,9 +9,12 @@ import java.util.stream.Collectors;
  */
 public class Question5 {
     public static void main(String[] args) {
+        // Parse args.
         List<Double> doubleArgs = Arrays.stream(args).map(Double::parseDouble).collect(Collectors.toList());
+        // Extract vars.
         double T = doubleArgs.get(0);
         double v = doubleArgs.get(1);
+        // Check if input values are allowed, printing error message(s) and exiting if not.
         boolean err = false;
         if (Math.abs(T) > 50) {
             System.out.println("|T|<=50F is not satisfied");
@@ -22,7 +25,9 @@ public class Question5 {
             err = true;
         }
         if (err) return;
+        // Compute Wind Chill.
         double w = 35.74 + 0.6215 * T + (0.4275 * T - 35.75) * Math.pow(v, 0.16);
+        // Output.
         System.out.println("The Wind Chill is " + w);
     }
 }
