@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ArrayBugs {
     public static void main(String[] args) {
         /// block of code #1:
@@ -17,5 +19,9 @@ public class ArrayBugs {
         for (int i = 0; i < 10; i++) {
             array3[i] = Math.random();
         }
+
+        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array2));
+        System.out.println(Arrays.toString(array3));
     }
 }
