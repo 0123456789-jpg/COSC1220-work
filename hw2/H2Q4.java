@@ -8,9 +8,13 @@ import java.util.stream.IntStream;
  */
 public class H2Q4 {
     public static void main(String[] args) {
+        // Generate ramdom dice sum array
         int[] arr = IntStream.generate(() -> roll() + roll()).limit(1000).toArray();
+        // Allocate frequency array
         int[] freq = new int[11];
+        // Compute frequency
         for (int x : arr) freq[x - 2]++;
+        // Output bar chart for each sum's frequency
         for (int i = 0; i < 11; i++)
             System.out.println("Sum " + (i + 2) + (i + 2 < 10 ? " " : "") + ": " + String.join("", Collections.nCopies(freq[i], "*")) + " " + freq[i]);
     }
