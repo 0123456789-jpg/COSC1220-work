@@ -8,12 +8,12 @@ public class Stat {
         return Math.exp(-Math.pow((x - mean) / stdDev, 2) / 2) / (Math.sqrt(2 * Math.PI) * stdDev);
     }
 
-    private static double cdf(double x, double mean, double stdDev, int z) {
+    private static double cdf(double x, double mean, double stdDev) {
         double sum = 0;
-        long base = 1;
-        for (int i = 0; i < z; i++) {
-            base *= 2 * i + 1;
-            sum += Math.pow(z, 2 * i + 1) / base;
+        double term = x;
+        for (long i = 3; sum + term != sum; i += 2) {
+            sum += term;
+            term *= x * x / i;
         }
         return 0.5 + pdf(x, mean, stdDev) * sum;
     }
@@ -27,6 +27,6 @@ public class Stat {
         System.out.println(pdf(74, meanInches, stdDevInches));
         System.out.println(pdf(165, meanCm, stdDevCm));
         System.out.println();
-        System.out.println(cdf(169, meanCm, stdDevCm, 100)); // FIXME: NaN
+        System.out.println(cdf(169, meanCm, stdDevCm)); // FIXME: NaN
     }
 }
