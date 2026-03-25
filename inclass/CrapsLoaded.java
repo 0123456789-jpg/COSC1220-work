@@ -9,7 +9,7 @@ public class CrapsLoaded {
         } else if (random < p1 + p6) {
             return 1;
         } else {
-            return rng.nextInt(2, 6);
+            return rng.nextInt(4) + 2;
         }
     }
 
@@ -32,6 +32,9 @@ public class CrapsLoaded {
     }
 
     public static void main(String[] args) {
+        // testCount = 100000000
+        // p1 = 0.001
+        // P of winning: 0.58195235
         double p1 = Double.parseDouble(args[0]);
         if (p1 < 0 || p1 > (1.0 / 6.0)) {
             System.out.println("0<=p1<=(1/6) not satisfied");
