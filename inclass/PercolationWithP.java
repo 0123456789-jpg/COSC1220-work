@@ -52,16 +52,9 @@ public class PercolationWithP {
     public static boolean[][] random(int n, double p) {
         boolean[][] a = new boolean[n][n];
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-
-                if (Math.random() > p) {
-                    a[i][j] = false;
-                } else {
-                    a[i][j] = true;
-                }
-            }
-        }
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
+                a[i][j] = !(Math.random() > p);
         return a;
     }
 

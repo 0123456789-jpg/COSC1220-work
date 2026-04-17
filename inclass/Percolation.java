@@ -9,9 +9,7 @@ public class Percolation {
     private static boolean[][] flow(boolean[][] isOpen) {
         int n = isOpen.length;
         boolean[][] isFull = new boolean[n][n];
-        for (int j = 0; j < n; j++) {
-            isFull[0][j] = isOpen[0][j];
-        }
+        System.arraycopy(isOpen[0], 0, isFull[0], 0, n);
         for (int i = 1; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 isFull[i][j] = isOpen[i][j] && isFull[i - 1][j];
