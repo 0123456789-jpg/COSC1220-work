@@ -15,7 +15,7 @@ public class Rational {
     public static void main(String[] args) {
         Rational x = new Rational(2, 3);
         Rational y = new Rational(-1, 4);
-        System.out.println(x.plus(y).times(x).divides(y));
+        System.out.println(x.plus(y).times(x).divides(y).minus(x));
     }
 
     private Rational inverse() {
