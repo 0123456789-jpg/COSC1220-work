@@ -28,7 +28,7 @@ public class Time {
     }
 
     private void setTime(int hour, int minute, int second) {
-        if (hour >= 24 || minute >= 60 || second >= 60)
+        if (hour >= 24 || minute >= 60 || second >= 60 || hour < 0 || minute < 0 || second < 0)
             throw new IllegalArgumentException("Illegal time representation");
         this.hour = hour;
         this.minute = minute;
