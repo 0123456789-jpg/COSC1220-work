@@ -8,6 +8,22 @@ public class Time {
     private int minute;
     private int second;
 
+    public Time() {
+        this(0);
+    }
+
+    public Time(int hour) {
+        this(hour, 0);
+    }
+
+    public Time(int hour, int minute) {
+        this(hour, minute, 0);
+    }
+
+    public Time(int hour, int minute, int second) {
+        this.setTime(hour, minute, second);
+    }
+
     public static void main(String[] args) {
         Time time1 = new Time();
         displayTime("After time object is created", time1);
@@ -27,6 +43,18 @@ public class Time {
         System.out.printf("%s%nUniversal Time: %s%nStandard time: %s%n", header, t.toUniversalString(), t);
     }
 
+    public int getHour() {
+        return hour;
+    }
+
+    public int getMinute() {
+        return minute;
+    }
+
+    public int getSecond() {
+        return second;
+    }
+
     private void setTime(int hour, int minute, int second) {
         if (hour >= 24 || minute >= 60 || second >= 60 || hour < 0 || minute < 0 || second < 0)
             throw new IllegalArgumentException("Illegal time representation");
@@ -36,7 +64,7 @@ public class Time {
     }
 
     public String toUniversalString() {
-        return String.format("%02d:%02d:%02d", hour, minute, second);
+        return String.format("%02d:%02d:%02d", this.getHour(), this.getMinute(), this.getSecond());
     }
 
     public String toString() {
