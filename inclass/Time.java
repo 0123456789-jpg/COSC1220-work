@@ -1,6 +1,6 @@
 /**
  * @author Shunzhong Zhu
- * @version 0.1.0
+ * @version 0.1.1
  * @since 2026-04-22
  */
 public class Time {
@@ -22,6 +22,10 @@ public class Time {
 
     public Time(int hour, int minute, int second) {
         this.setTime(hour, minute, second);
+    }
+
+    public Time(Time time) {
+        this(time.hour, time.minute, time.second);
     }
 
     public static void main(String[] args) {
@@ -47,12 +51,24 @@ public class Time {
         return hour;
     }
 
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
     public int getMinute() {
         return minute;
     }
 
+    public void setMinute(int minute) {
+        this.minute = minute;
+    }
+
     public int getSecond() {
         return second;
+    }
+
+    public void setSecond(int second) {
+        this.second = second;
     }
 
     private void setTime(int hour, int minute, int second) {
