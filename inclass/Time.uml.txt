@@ -1,0 +1,29 @@
+# public class Time
+
+## Attributes
+
+- hour: int
+- minute: int
+- second: int
+
+## Instance Methods
+
++ <<constructor>>Time()
++ <<constructor>>Time(hour: int)
++ <<constructor>>Time(hour: int, minute: int)
++ <<constructor>>Time(hour: int, minute: int, second: int)
++ <<constructor>>Time(time: Time)
++ getHour(): int
++ setHour(hour: int): void
++ getMinute(): int
++ setMinute(minute: int): void
++ getSecond(): int
++ setSecond(second: int): void
+- setTime(hour: int, minute: int, second: int): void
++ toUniversalString(): String
++ toString(): String
+
+## Class Methods
+
++ main(args: String[]): void
+- displayTime(header: String, time: Time): void
