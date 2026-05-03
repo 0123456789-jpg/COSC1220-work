@@ -1,4 +1,4 @@
-# public class Time
+# public class TimeInClass
 
 ## Attributes
 
@@ -8,11 +8,11 @@
 
 ## Instance Methods
 
-+ <<constructor>>Time()
-+ <<constructor>>Time(hour: int)
-+ <<constructor>>Time(hour: int, minute: int)
-+ <<constructor>>Time(hour: int, minute: int, second: int)
-+ <<constructor>>Time(time: Time)
++ <<constructor>>TimeInClass()
++ <<constructor>>TimeInClass(hour: int)
++ <<constructor>>TimeInClass(hour: int, minute: int)
++ <<constructor>>TimeInClass(hour: int, minute: int, second: int)
++ <<constructor>>TimeInClass(time: TimeInClass)
 + getHour(): int
 + setHour(hour: int): void
 + getMinute(): int
@@ -26,4 +26,4 @@
 ## Class Methods
 
 + main(args: String[]): void
-- displayTime(header: String, time: Time): void
+- displayTime(header: String, time: TimeInClass): void

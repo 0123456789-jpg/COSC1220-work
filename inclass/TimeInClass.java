@@ -3,33 +3,33 @@
  * @version 0.1.1
  * @since 2026-04-22
  */
-public class Time {
+public class TimeInClass {
     private int hour;
     private int minute;
     private int second;
 
-    public Time() {
+    public TimeInClass() {
         this(0);
     }
 
-    public Time(int hour) {
+    public TimeInClass(int hour) {
         this(hour, 0);
     }
 
-    public Time(int hour, int minute) {
+    public TimeInClass(int hour, int minute) {
         this(hour, minute, 0);
     }
 
-    public Time(int hour, int minute, int second) {
+    public TimeInClass(int hour, int minute, int second) {
         this.setTime(hour, minute, second);
     }
 
-    public Time(Time time) {
+    public TimeInClass(TimeInClass time) {
         this(time.hour, time.minute, time.second);
     }
 
     public static void main(String[] args) {
-        Time time1 = new Time();
+        TimeInClass time1 = new TimeInClass();
         displayTime("After time object is created", time1);
         System.out.println();
         time1.setTime(13, 27, 6);
@@ -43,7 +43,7 @@ public class Time {
         displayTime("After calling setTime with invalid values", time1);
     }
 
-    private static void displayTime(String header, Time t) {
+    private static void displayTime(String header, TimeInClass t) {
         System.out.printf("%s%nUniversal Time: %s%nStandard time: %s%n", header, t.toUniversalString(), t);
     }
 
