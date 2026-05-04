@@ -13,10 +13,10 @@ public class Date {
      * <li>2 for middle endian.</li>
      * </ul>
      */
-    private int type;
-    private int year;
-    private int month;
-    private int day;
+    private final int type;
+    private final int year;
+    private final int month;
+    private final int day;
 
     /**
      * Create a Julian date.
