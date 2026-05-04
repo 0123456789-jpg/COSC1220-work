@@ -1,0 +1,108 @@
+<html>
+<style>
+    body { font-family: "Lucida Grande"; }
+    code { font-family: "Menlo"; }
+    table { width: 100%; border-collapse: collapse; margin: 8pt 0; }
+    th { background: #336699; color: white; padding: 6pt; }
+    td { border: 1pt solid #ddd; padding: 6pt; }
+    h1 { border-bottom: 2pt solid #ccc; padding-bottom: 4pt; }
+    footer { font-size: small; }
+</style>
+<h1><code>Time</code> API</h1>
+<h2>Constructors</h2>
+<table>
+    <tr>
+        <th>Constructor</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td><code>Time()</code></td>
+        <td>Construct a Time object with default 00:00:00</td>
+    </tr>
+    <tr>
+        <td><code>Time(int hour)</code></td>
+        <td>Construct a Time object with [hour]:00:00</td>
+    </tr>
+    <tr>
+        <td><code>Time(int hour, int minute)</code></td>
+        <td>Construct a Time object with [hour]:[minute]:00</td>
+    </tr>
+    <tr>
+        <td><code>Time(int hour, int minute, int second)</code></td>
+        <td>Construct a Time object with [hour]:[minute]:[second]</td>
+    </tr>
+    <tr>
+        <td><code>Time(Time time)</code></td>
+        <td>Construct a Time object by copying an existing Time object</td>
+    </tr>
+</table>
+<h2>Instance Methods</h2>
+<table>
+    <tr>
+        <th>Modifier and Type</th>
+        <th>Instance Method</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td><code>int</code></td>
+        <td><code>getHour()</code></td>
+        <td>Returns the <code>hour</code> field</td>
+    </tr>
+    <tr>
+        <td><code>void</code></td>
+        <td><code>setHour(int hour)</code></td>
+        <td>Sets the <code>hour</code> field to the given value</td>
+    </tr>
+    <tr>
+        <td><code>int</code></td>
+        <td><code>getMinute()</code></td>
+        <td>Returns the <code>minute</code> field</td>
+    </tr>
+    <tr>
+        <td><code>void</code></td>
+        <td><code>setMinute(int minute)</code></td>
+        <td>Sets the <code>minute</code> field to the given value</td>
+    </tr>
+    <tr>
+        <td><code>int</code></td>
+        <td><code>getSecond()</code></td>
+        <td>Returns the <code>second</code> field</td>
+    </tr>
+    <tr>
+        <td><code>void</code></td>
+        <td><code>setSecond(int second)</code></td>
+        <td>Sets the <code>second</code> field to the given value</td>
+    </tr>
+    <tr>
+        <td><code>void</code></td>
+        <td><code>setTime(int hour, int minute, int second)</code></td>
+        <td>Sets the <code>hour</code>, <code>minute</code>, and <code>second</code> field to the given value</td>
+    </tr>
+    <tr>
+        <td><code>String</code></td>
+        <td><code>toUniversalString()</code></td>
+        <td>Convert stored time to a string using 24-hour format</td>
+    </tr>
+    <tr>
+        <td><code>String</code></td>
+        <td><code>toString()</code></td>
+        <td>Convert stored time to a string using 12-hour format</td>
+    </tr>
+    <tr>
+        <td><code>void</code></td>
+        <td><code>tick()</code></td>
+        <td>Increment stored time by 1 second</td>
+    </tr>
+    <tr>
+        <td><code>void</code></td>
+        <td><code>incrementMinute()</code></td>
+        <td>Increment stored time by 1 minute</td>
+    </tr>
+    <tr>
+        <td><code>void</code></td>
+        <td><code>incrementHour()</code></td>
+        <td>Increment stored time by 1 hour</td>
+    </tr>
+</table>
+<footer>Shunzhong Zhu<br>COSC 1220 Assignment 4<br>2026.05.03</footer>
+</html>
