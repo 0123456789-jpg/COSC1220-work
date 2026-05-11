@@ -4,7 +4,7 @@ import java.security.SecureRandom;
 
 /**
  * @author Shunzhong Zhu
- * @version 0.1.0
+ * @version 0.1.1
  * @since 2026-05-11
  */
 public class Nums {
@@ -12,6 +12,24 @@ public class Nums {
         FileWriter writer = new FileWriter("nums.txt");
         SecureRandom rng = new SecureRandom();
         for (int i = 0; i < 1000; i++)
-            writer.write(rng.nextInt(999) + "\n");
+            switch (rng.nextInt(5)) {
+                case 0:
+                    writer.write("Zero");
+                    break;
+                case 1:
+                    writer.write("One");
+                    break;
+                case 2:
+                    writer.write("Two\n");
+                    break;
+                case 3:
+                    writer.write("Three");
+                    break;
+                case 4:
+                    writer.write("Four");
+                    break;
+                default:
+                    throw new RuntimeException("Unreachable");
+            }
     }
 }
