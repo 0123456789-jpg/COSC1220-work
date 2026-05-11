@@ -5,3 +5,5 @@ out/
 *.class
 *.zip
 *.pdf
+inclass/introcs.jar
+inclass/introcs/
