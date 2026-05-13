@@ -3,7 +3,7 @@
  * @since 2026-05-13
  */
 public class Circle extends Shape {
-    private double radius;
+    private final double radius;
 
     public Circle(double radius) {
         super();
