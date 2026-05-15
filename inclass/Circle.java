@@ -1,5 +1,5 @@
 /**
- * @version 0.1.1
+ * @version 0.1.2
  * @since 2026-05-13
  */
 public class Circle extends Shape {
@@ -20,5 +20,10 @@ public class Circle extends Shape {
     @Override
     public double perimeterCalc() {
         return 2 * Math.PI * this.radius;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Circle { radius: %f area: %f }", this.radius, this.area);
     }
 }
